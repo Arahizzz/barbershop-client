@@ -1,0 +1,1 @@
+export const apiURL:string = import.meta.env.VUE_APP_ROOT_API as string ?? 'http://localhost:8080' ;
