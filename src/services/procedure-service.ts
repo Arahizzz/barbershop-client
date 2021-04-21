@@ -1,9 +1,11 @@
-import { Procedure } from "../models/Procedure";
+import { Procedure, ProcedureFilter } from "../models/Procedure";
 import axios from "axios";
 import { apiURL } from "./constants";
 
-export async function getProcedures(): Promise<Procedure[]> {
-  const response = await axios.get<Procedure[]>(`${apiURL}/procedures`);
+export async function getProcedures(filter: ProcedureFilter): Promise<Procedure[]> {
+  const response = await axios.get<Procedure[]>(`${apiURL}/procedures`, {
+    params: filter
+  });
   return response.data;
 }
 

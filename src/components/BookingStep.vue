@@ -3,6 +3,7 @@
     <el-step title="Procedure"></el-step>
     <el-step title="Master"></el-step>
     <el-step title="Date and Time"></el-step>
+    <el-step title="Account"></el-step>
     <el-step title="Summary"></el-step>
   </el-steps>
 </template>
@@ -19,7 +20,6 @@ export default defineComponent({
     }
   },
   setup () {
-
   }
 })
 </script>

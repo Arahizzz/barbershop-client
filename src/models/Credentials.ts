@@ -1,3 +1,4 @@
-export class Credentials {
-  public constructor(public email: string = "", public password: string = "") {}
+export interface Credentials {
+  email: string;
+  password: string;
 }

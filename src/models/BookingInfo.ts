@@ -2,6 +2,7 @@ export interface BookingInfo {
   procedureId?: number;
   masterId?: number;
   dateTime?: Date;
+  customerId?: number;
 }
 
 export interface ProcedureBooking extends BookingInfo {
@@ -12,6 +13,10 @@ export interface MasterBooking extends ProcedureBooking {
   masterId: number;
 }
 
-export interface DateTime extends MasterBooking {
+export interface DateTimeBooking extends MasterBooking {
   dateTime: Date;
+}
+
+export interface CustomerBooking extends DateTimeBooking {
+  customerId: number;
 }

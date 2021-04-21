@@ -9,7 +9,7 @@
           </el-button>
         </div>
       </template>
-      <p>Duration: {{ procedure.duration }}</p>
+      <p>Duration: {{ procedure.duration }} min</p>
       <p>Price: {{ procedure.price }}</p>
     </el-card>
   </el-col>

@@ -1,31 +1,32 @@
 <template>
-  <el-col :span="20" :sm="12" :md="6" :lg="4" :xl="3">
+  <el-col :span="20" :sm="12" :md="6" :lg="5" :xl="4">
     <el-card shadow="hover">
       <el-image
         class="master-photo"
-        src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
+        :src="master.photo"
         fit="cover"
         lazy
       />
       <div style="padding: 14px">
-        <h3>
+        <router-link :to="{name: 'masterPage', params: {id: master.accountId}}"><h3>
           {{ master.firstName }} {{ master.secondName }}
           {{ master.lastName }}
-        </h3>
+        </h3></router-link>
         <div class="bottom">
           <el-rate
             v-model="master.rating"
             disabled
             text-color="#ff9900"
             show-score
-            score-template="{value} stars"
+            score-template="{value}"
           >
           </el-rate>
           <el-rate
             v-model="master.levelId"
+            :max="2"
             disabled
             :colors="['#008000']"
-            :texts="['trainee', 'master', 'pro']"
+            :texts="['Trainee', 'Master', 'Pro']"
             show-text
           >
           </el-rate>
